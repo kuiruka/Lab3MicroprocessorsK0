@@ -13,7 +13,6 @@ start:
 	movwf	TRISC, A	    ; Port C all outputs
 	bra 	test
 loop:
-	movwf   0x06, A
 	movff 	0x06, PORTC
 	incf 	0x06, W, A
 test:
