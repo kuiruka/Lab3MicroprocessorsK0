@@ -23,8 +23,8 @@ DAC_Setup:
 	movlw   00000000B       ; Timer1 is selected
 	movwf   CCPTMRS1,A
 	
-	movlw   0x0a		; The value to compare with TMRH:TMRL
-	movwf   CCPR4L,A
+	movlw   0x3e		; The value to compare with TMRH:TMRL
+	movwf   CCPR4L,A        ; 800Hz x 10 = 8kHz is enough? 62.5
 	movlw   0x00
 	movwf   CCPR4H,A
 	movlw   00110011B       ; Set timer1 to 16-bit, Fosc/4/8, 500kHz
